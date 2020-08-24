@@ -1,0 +1,21 @@
+# recaptcha v3
+Verificar, para adicionar ao BFF.
+
+ # google com exemplo:
+	https://codelabs.developers.google.com/codelabs/reCAPTCHA/index.html#0
+
+
+ # Baeldung tutorial com explicação.
+	https://www.baeldung.com/spring-security-registration-captcha
+
+	GitHub: 
+	https://github.com/Baeldung/spring-security-registration/tree/master
+
+ # Mediun tutorial e explicação
+	https://medium.com/@cristi.rosu4/protecting-your-spring-boot-rest-endpoints-with-google-recaptcha-and-aop-31328a3f56b7
+
+	GitHub:
+	https://github.com/cristirosu/spring-boot-recaptcha-aop
+
+
+

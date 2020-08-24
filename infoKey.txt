@@ -1,0 +1,7 @@
+RECAPTCHA V3
+key-site = 6Lfi_LAZAAAAAHtCuTsaB9kEbvRqvcREmNtdFiCf
+key-secret = 6Lfi_LAZAAAAACjoTRX2BCS5RUL39NO3WZso4Wyw
+
+RECAPTCHA V2
+key-site = 6LcztrwZAAAAADEmAqbYHp8Judq8f7hL3yocoWi7
+key-secret = 6LcztrwZAAAAAJTRDiP3_ayqPIaxi29lEuwHeFuN

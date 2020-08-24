@@ -1,0 +1,55 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+    id 'application'
+}
+
+mainClassName = "br.com.recaptcha.RecaptchaApplication"
+
+dependencies {
+    compile project(":contract")
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://repository.jboss.org/nexus/content/repositories/public/' }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE"
+        }
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.3.1.RELEASE'
+        compile group: 'org.projectreactor', name: 'reactor-spring', version: '1.0.1.RELEASE'
+
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        compile group: 'org.json', name: 'json', version: '20090211'
+        compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.3.1.RELEASE'
+
+        testCompile 'org.mockito:mockito-junit-jupiter'
+        testImplementation 'org.junit.jupiter:junit-jupiter-engine'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
