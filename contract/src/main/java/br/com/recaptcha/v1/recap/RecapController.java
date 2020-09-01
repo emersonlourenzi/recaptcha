@@ -13,7 +13,7 @@ public class RecapController {
 
     private final RecapFacadeContract recapFacadeContract;
 
-//    @CrossOrigin
+    @CrossOrigin
     @PostMapping("/recaptchav3")
     public Mono<RecapModel> recaptchaV3(@RequestBody RecapRequestContract token) {
         System.out.println(token.getToken());
