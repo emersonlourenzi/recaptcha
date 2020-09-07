@@ -10,8 +10,6 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-import java.util.Objects;
-
 @Service
 @Data
 @AllArgsConstructor
@@ -37,18 +35,11 @@ public class RecapService {
                 .bodyToMono(RecapModelImpl.class);
     }
 
-    public Mono<RecapModelImpl> recaptchaV2(String key) {
-
+    public Mono<RecapModelImpl> recaptchaV2(RecapRequestImpl key) {
         return WebClient.create(URLV2 + key)
                 .post()
                 .retrieve()
                 .bodyToMono(RecapModelImpl.class);
-
-        /*return Mono.just(RecapModelImpl.builder()
-                .action("reCAPTCHA V2")
-                .success(true)
-                .score(1.0F)
-                .build());*/
     }
 
 }

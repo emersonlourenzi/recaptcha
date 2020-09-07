@@ -20,9 +20,9 @@ public class RecapController {
         return recapFacadeContract.recaptchaV3(token);
     }
 
-    @GetMapping("/recaptchav2/{key}")
-    public Mono<RecapModel> recaptchaV2(@PathVariable String key) {
-        return recapFacadeContract.recaptchaV2(key);
+    @GetMapping("/recaptchav2")
+    public Mono<RecapModel> recaptchaV2(@RequestBody RecapRequestContract token) {
+        return recapFacadeContract.recaptchaV2(token);
     }
 
 }
