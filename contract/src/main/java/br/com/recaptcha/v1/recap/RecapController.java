@@ -20,9 +20,11 @@ public class RecapController {
         return recapFacadeContract.recaptchaV3(token);
     }
 
-    @GetMapping("/recaptchav2")
-    public Mono<RecapModel> recaptchaV2(@RequestBody RecapRequestContract token) {
-        return recapFacadeContract.recaptchaV2(token);
+    @CrossOrigin
+    @PostMapping("/recaptchav2")
+    public Mono<RecapModel> recaptchaV2(@RequestBody RecapRequestContract recap) {
+        System.out.println("TO AQUI");
+        return recapFacadeContract.recaptchaV2(recap);
     }
 
 }

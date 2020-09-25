@@ -16,7 +16,7 @@ public class RecapFacadeImpl {
         return recapService.recaptchaV3(token);
     }
 
-    public Mono<RecapModelImpl> recaptchaV2(RecapRequestImpl token) {
-        return recapService.recaptchaV2(token);
+    public Mono<RecapModelImpl> recaptchaV2(RecapRequestImpl recap) {
+        return recapService.recaptchaV2(recap);
     }
 }

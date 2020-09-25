@@ -17,7 +17,7 @@ public class RecapFacadeContract {
         return recapFacade.recaptchaV3(RecapMapper.mapperRecapRequestToImpl(token)).map(RecapMapper::mapperRecapToModel);
     }
 
-    public Mono<RecapModel> recaptchaV2(RecapRequestContract token) {
-        return recapFacade.recaptchaV2(RecapMapper.mapperRecapRequestToImpl(token)).map(RecapMapper::mapperRecapToModel);
+    public Mono<RecapModel> recaptchaV2(RecapRequestContract recap) {
+        return recapFacade.recaptchaV2(RecapMapper.mapperRecapRequestToImpl(recap)).map(RecapMapper::mapperRecapToModel);
     }
 }

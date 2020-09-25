@@ -13,6 +13,8 @@ public class RecapMapper {
                 .challengeTs(recapModel.getChallengeTs())
                 .hostname(recapModel.getHostname())
                 .score(recapModel.getScore())
+                .success(recapModel.isSuccess())
+//                .errorCodes(recapModel.getErrorCodes())
                 .build();
     }
 

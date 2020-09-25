@@ -35,8 +35,8 @@ public class RecapService {
                 .bodyToMono(RecapModelImpl.class);
     }
 
-    public Mono<RecapModelImpl> recaptchaV2(String key) {
-        return WebClient.create(URLV2 + key)
+    public Mono<RecapModelImpl> recaptchaV2(RecapRequestImpl recap) {
+        return WebClient.create(URLV2 + recap.getToken())
                 .post()
                 .retrieve()
                 .bodyToMono(RecapModelImpl.class);
