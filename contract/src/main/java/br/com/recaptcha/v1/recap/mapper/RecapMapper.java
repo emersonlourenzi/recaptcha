@@ -14,7 +14,7 @@ public class RecapMapper {
                 .hostname(recapModel.getHostname())
                 .score(recapModel.getScore())
                 .success(recapModel.isSuccess())
-//                .errorCodes(recapModel.getErrorCodes())
+                .errorCodes(recapModel.getErrorCodes())
                 .build();
     }
 
